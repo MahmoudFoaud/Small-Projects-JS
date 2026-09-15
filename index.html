@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center; background-color: darkgoldenrod;">
+      <div>
+         <h3>Wight</h3>
+         <input type="text" id="W-input">
+      </div>
+      <div>
+         <h3>Height</h3>
+         <input type="text" id="H-input">
+      </div>
+      <button id="Submit">Calc</button>
+      <div>
+         <h4 id="bmi"></h4>
+         <h3 id="bmi-category"></h3>
+      </div>
+    </div>>
+
+
+
+</body>
+<script>
+    /*console.log("hello world! from script")
+    var x = 10;
+    var y = 20;
+     x = 30;
+    console.log("x + y = " + (x + y))
+
+    var title = "My Page Title";
+    console.log("Page Title: " + title) 
+
+   var number1 = 10;
+   var number2 = 4;
+   var sum = number1 + number2;
+   var sub = number1 - number2;
+   var mul = number1 * number2;
+   var div = number1 / number2;
+   var mod = number1 % number2;
+   var massage = `first number is: ${number1}\n and second number is: ${number2}\n and sum is: ${sum}\n and sub is: ${sub}\n and mul is: ${mul}\n and div is: ${div}\n and mod is: ${mod}`;
+    document.getElementById("result").innerHTML = massage
+   console.log(massage)*/
+
+   //string methods
+  /*var title = " Eng mahmoud"
+  console.log(title.substring(0, 11))
+  console.log(title.length)
+  console.log(title.toUpperCase())
+  console.log(title.toLowerCase())
+  console.log(title.replace("Eng" , "Engineer"))
+  var mychar= title.charAt(5)
+  console.log(typeof mychar)
+  console.log(title[0])
+  var name= "foaud"
+  console.log(title + " " + name)
+  console.log(`${title}, ${name}`)*/
+
+  
+  // if statement 
+  
+ /*var age = 30
+ var health = "strong"
+
+ if(age >= 70 ){
+    console.log("old man and the age is : " + age)
+ }
+ else if(age >= 40 && health == "strong"){
+    console.log("mid and the health in good :" + age)
+ }
+ else{
+    console.log("young and the age is: " + age)
+ }*/
+
+//  Switch statement
+// hear i am swith (if statemnt) to (swith statement)
+
+// var age = 20
+// var health = "strong"
+// switch(true){
+//     case(age >= 60):
+//     console.log("old")
+//     break
+//     case(age >= 40 && health == "strong"):
+//     console.log("mid and the health is good ")
+//     break 
+//     default:
+//         console.log("young and health is good and age = " + age)
+
+// }
+
+// var age = document.getElementById("age").value
+// document.getElementById("result").innerHTML =`${age}`
+
+
+
+
+// document.getElementById("submit").addEventListener("click"), function(){
+   
+
+//     var age = document.getElementById("age").value
+//     console.log(age)
+
+
+// }
+
+document.getElementById("Submit").addEventListener("click", function(){
+   var weight= document.getElementById("W-input").value
+   var height= document.getElementById("H-input").value
+
+   var bmi= weight/(height*height)
+   document.getElementById("bmi").innerHTML = bmi
+   var bmiCategory = "underweihht"
+   if(bmi < 18){
+   bmiCategory = "underweight"
+   }
+   else if(bmi>=18.5 && bmi<22.9){
+   bmiCategory = "Normal Weight"
+   }
+   else if(bmi>=23.0 && bmi <=24.9 ){
+   bmiCategory  = "Obesity"
+   }
+   else{
+   bmiCategory = "Severe Obseity"
+   }
+   document.getElementById("bmi-category").innerHTML= bmiCategory 
+})
+
+ 
+
+</script>
+</html>
