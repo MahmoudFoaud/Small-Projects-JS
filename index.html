@@ -130,7 +130,24 @@ document.getElementById("Submit").addEventListener("click", function(){
    document.getElementById("bmi-category").innerHTML= bmiCategory 
 })
 
- 
+
+var students=["ahmed", "tyson", "abo eljoo", "maho"]
+
+students.push("abo roro")
+students[1] = "ammar"
+students.pop()
+console.log(students)
+students.splice(2, 1, "salem")
+console.log(students)
+students.splice(2, 0, "mohamed")
+console.log(students)
+console.log(students.includes("maho"))
+console.log(students.includes("aseem"))
+console.log(students.indexOf("salem"))
+console.log(students.indexOf("salem"))
+students.shift()
+console.log(students)
+
 
 </script>
 </html>
