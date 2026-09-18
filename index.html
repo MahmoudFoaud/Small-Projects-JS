@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="text-align: center; background-color: darkgoldenrod;">
+    <!-- <div style="text-align: center; background-color: darkgoldenrod;">
       <div>
          <h3>Wight</h3>
          <input type="text" id="W-input">
@@ -20,7 +20,19 @@
          <h4 id="bmi"></h4>
          <h3 id="bmi-category"></h3>
       </div>
-    </div>>
+    </div>> -->
+    <div style="text-align: center;">
+      <div>
+         <input type="text" id="user-input">
+         <button id="submit">Submit</button>
+         <button id="delete">Delete</button>
+      </div>
+      
+      <div>
+         <h3 id="names"></h3>
+      </div>
+
+    </div>
 
 
 
@@ -108,46 +120,61 @@
 
 // }
 
-document.getElementById("Submit").addEventListener("click", function(){
-   var weight= document.getElementById("W-input").value
-   var height= document.getElementById("H-input").value
+// document.getElementById("Submit").addEventListener("click", function(){
+//    var weight= document.getElementById("W-input").value
+//    var height= document.getElementById("H-input").value
 
-   var bmi= weight/(height*height)
-   document.getElementById("bmi").innerHTML = bmi
-   var bmiCategory = "underweihht"
-   if(bmi < 18){
-   bmiCategory = "underweight"
-   }
-   else if(bmi>=18.5 && bmi<22.9){
-   bmiCategory = "Normal Weight"
-   }
-   else if(bmi>=23.0 && bmi <=24.9 ){
-   bmiCategory  = "Obesity"
-   }
-   else{
-   bmiCategory = "Severe Obseity"
-   }
-   document.getElementById("bmi-category").innerHTML= bmiCategory 
+//    var bmi= weight/(height*height)
+//    document.getElementById("bmi").innerHTML = bmi
+//    var bmiCategory = "underweihht"
+//    if(bmi < 18){
+//    bmiCategory = "underweight"
+//    }
+//    else if(bmi>=18.5 && bmi<22.9){
+//    bmiCategory = "Normal Weight"
+//    }
+//    else if(bmi>=23.0 && bmi <=24.9 ){
+//    bmiCategory  = "Obesity"
+//    }
+//    else{
+//    bmiCategory = "Severe Obseity"
+//    }
+//    document.getElementById("bmi-category").innerHTML= bmiCategory 
+// })
+var students=[]
+document.getElementById("submit").addEventListener("click", function(){
+   var name= document.getElementById("user-input").value
+   console.log(name)
+   students.push(name)
+      document.getElementById("names").innerHTML = students
+      document.getElementById("user-input").value =""
+
+   
+})
+document.getElementById("delete").addEventListener("click", function(){
+   var deleatStudents = document.getElementById("user-input").value
+   students.pop(deleatStudents)
+      document.getElementById("names").innerHTML = students
+      document.getElementById("user-input").value =""
+
 })
 
 
-var students=["ahmed", "tyson", "abo eljoo", "maho"]
 
-students.push("abo roro")
-students[1] = "ammar"
-students.pop()
-console.log(students)
-students.splice(2, 1, "salem")
-console.log(students)
-students.splice(2, 0, "mohamed")
-console.log(students)
-console.log(students.includes("maho"))
-console.log(students.includes("aseem"))
-console.log(students.indexOf("salem"))
-console.log(students.indexOf("salem"))
-students.shift()
-console.log(students)
-
+//students.push("abo roro")
+// students[1] = "ammar"
+// students.pop()
+// console.log(students)
+// students.splice(2, 1, "salem")
+// console.log(students)
+// students.splice(2, 0, "mohamed")
+// console.log(students)
+// console.log(students.includes("maho"))
+// console.log(students.includes("aseem"))
+// console.log(students.indexOf("salem"))
+// console.log(students.indexOf("salem"))
+// students.shift()
+// console.log(students)
 
 </script>
 </html>
